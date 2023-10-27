@@ -1,0 +1,16 @@
+{
+  "name": "journaling",
+  "version": "1.0.0",
+  "description": "Any quick tutorials or projects done for fun or learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.0.3",
+    "uuid": "^9.0.1"
+  }
+}
