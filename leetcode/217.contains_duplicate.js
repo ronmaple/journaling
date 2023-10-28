@@ -1,4 +1,4 @@
-// Easy
+// @easy
 /**
  * @param {number[]} nums
  * @return {boolean}

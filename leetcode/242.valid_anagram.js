@@ -1,4 +1,4 @@
-// Easy
+// @easy
 // Could probably be optimized, but this is easy enough already.
 /**
  * @param {string} s
