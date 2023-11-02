@@ -42,3 +42,48 @@ const isDuplicate = (triplets, set) => {
 
   return false
 }
+
+// Attempt #2
+// faster, but maybe could be a little faster
+// 155ms 58.90MB
+// can porbably add another while (left < right && nums[right] === nums[right + 1]) { right-- } to avoid duplicates
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var threeSum = function (nums) {
+  nums.sort((a, b) => a - b)
+  const triplets = []
+  if (nums.length < 3) {
+    return triplets
+  }
+  for (let i = 0; i < nums.length; i++) {
+    let left = i + 1
+    let right = nums.length - 1
+
+    while (left < right) {
+      const sum = nums[i] + nums[left] + nums[right]
+      if (sum === 0) {
+        triplets.push([nums[i], nums[left], nums[right]])
+        left++
+        // to avoid duplicates
+        while (left < right && nums[left] === nums[left - 1]) {
+          left++
+        }
+      }
+      else if (sum > 0) {
+        right--
+      }
+      else {
+        left++
+      }
+    }
+
+    // handle duplicates
+    while (nums[i] === nums[i+1]) {
+      i++
+    }
+  }
+
+  return triplets
+};
