@@ -1,3 +1,5 @@
+// @easy
+// O(log n) binary search, space O(1)
 var nextGreatestLetter = function(letters, target) {
   let forward = 0
   let backward = letters.length - 1
