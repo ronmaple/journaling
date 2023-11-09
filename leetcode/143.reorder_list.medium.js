@@ -1,6 +1,8 @@
 // @medium
 // Didn't need clues but the solution isn't great. Will try to improve it.
 // 85ms 50.1mb
+// My idea here is to store references in a stack
+// then pop them off and re-assign the next pointers
 var reorderList = function (head) {
   const pos = []
   let node = head
