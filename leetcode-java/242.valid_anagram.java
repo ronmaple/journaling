@@ -1,21 +1,21 @@
+// 2ms - 98% of users.
+// strings are represented as ASCII -- so c - 'a' represents the index of the character in the array.
 class Solution {
   public boolean isAnagram(String s, String t) {
     if (s.length() != t.length()) {
       return false;
     }
-    Map<Character, Integer> frequencies = new HashMap<>();
+    int[] frequencies = new int[26];
+
     for (char c : s.toCharArray()) {
-      if (!frequencies.containsKey(c)) {
-        frequencies.put(c, 0);
-      }
-      frequencies.put(c, frequencies.get(c) + 1);
+      frequencies[c - 'a']++;
     }
 
     for (char c : t.toCharArray()) {
-      if (!frequencies.containsKey(c) || frequencies.get(c) <= 0) {
+      frequencies[c - 'a']--;
+      if (frequencies[c - 'a'] < 0) {
         return false;
       }
-      frequencies.put(c, frequencies.get(c) - 1);
     }
 
     return true;
