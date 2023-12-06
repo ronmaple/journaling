@@ -43,4 +43,4 @@ I injured my right knee 2 weeks ago (which I later realized might be my IT bands
 - numeric `day[n]-branch` ends to 42(?)
 - starting a new branching `branch-1`
 
-new folder: `/leetcode-java` - learning Java and reviewing older leetcode problems.
+new folder: `/leetcode-java` - learning Java by reviewing older leetcode problems.

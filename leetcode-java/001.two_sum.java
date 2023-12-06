@@ -4,14 +4,10 @@ class Solution {
 
         for (int i = 0; i < nums.length; i++) {
           int diff = target - nums[i];
-
           if (hashMap.containsKey(diff)) {
-            int secondIndex = hashMap.get(diff);
-            return new int[]{secondIndex, i};
+            return new int[]{hashMap.get(diff), i};
           }
-          if (!hashMap.containsKey(nums[i])) {
-            hashMap.put(nums[i], i);
-          }
+          hashMap.put(nums[i], i);
         }
         return new int[]{-1, -1};
     }
