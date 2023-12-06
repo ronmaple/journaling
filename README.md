@@ -37,3 +37,10 @@ After my set of DSA Q's, probably end of December:
   
 #### Running:
 I injured my right knee 2 weeks ago (which I later realized might be my IT bands) from probably too much running, but I perservered and worked up to strengthen my muscle imbalances. I'm slowly going to build up to 40km this week, 50km next, etc, all the way to my previous maintenance of ~70km+. Too bad it happened at the time that it did though, this would've been a great time to run more, but it's good that I'm recognizing it now so I can train smarter for the BMO marathon. 
+
+
+### Dec 6
+- numeric `day[n]-branch` ends to 42(?)
+- starting a new branching `branch-1`
+
+new folder: `/leetcode-java` - learning Java and reviewing older leetcode problems.
