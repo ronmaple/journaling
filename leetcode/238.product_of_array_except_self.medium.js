@@ -27,3 +27,22 @@ var productExceptSelf = function(nums) {
 
   return products
 };
+
+// better
+var productExceptSelf = function (nums) {
+  const products = Array(nums.length).fill(1)
+
+  let leftProduct = 1
+  let rightProduct = 1
+
+  for (let left = 0; left < nums.length; left++) {
+    const right = nums.length - 1 - left
+    products[left] = leftProduct * products[left]
+    products[right] = rightProduct * products[right]
+
+    leftProduct = nums[left] * leftProduct
+    rightProduct = nums[right] * rightProduct
+  }
+
+  return products
+}
