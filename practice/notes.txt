@@ -1,0 +1,47 @@
+
+All food items start with a 10-day shelf life.
+The shelf life of each item decrements daily.
+The fridge should be able to add and remove food items.
+For certain food types, such as fruits, the shelf life decrement might be different.
+[x]You don't have a database, so think about how you would store this information in your code.
+
+
+// assume that the repository is started
+// we have no database - for now I will store in memory
+// we can talk more about creating files for it, etc, to persist the data
+
+controller -> maanger -> model
+controller -- handle client requests 
+manager - manage business logic
+model - handle data structure
+
+Data structure for "Food"
+
+1. Define Data structure
+2. How it's stored in the server
+3. How it's retrieved
+4. How it's mutated
+
+Store this in the server, in memory, as a Food[]
+
+
+// Testing strategy:
+// something I typically like to work with QAs
+
+// the requirements are 10 day shelf-life
+// RESTful APIs
+// maybe to consider later:
+// since we're writing our own storage, in memory
+// we can later think about testing if our methods are correct
+// in a more granular manner, such as what happens if 
+// we try to delete an already deleted resource, etc
+
+// Based on the above:
+// I would:
+// Write a unit test to handle decrement logic
+// Integration test to 
+// handle basic api calls, and the behaviour
+// of the api for each methods
+// such as POST Food, validate the:
+// content,
+// API validation
